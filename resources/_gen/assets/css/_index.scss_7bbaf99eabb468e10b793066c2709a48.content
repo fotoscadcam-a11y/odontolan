@@ -15,6 +15,7 @@
   /* === Alternating content (post) sections  === */
   /* Light section - text color */
   --section-light-text-color: #3a4145;
+  --section-light-text-color-2: #676f74;
   /* Light section - background color */
   --section-light-bg-color: #f2efe8;
   /* Dark section - text color */
@@ -148,24 +149,28 @@ body {
       color: inherit;
       opacity: 0.9; }
 
-/* Left sticky menu */
+/* Top sticky menu */
 .fixed-nav {
-  background-color: var(--section-light-bg-color);
-  border-radius: 0 25px 20px 0;
-  padding: 1em 1.5em;
-  display: none;
-  flex-direction: column;
+  opacity: 1;
   position: fixed;
-  top: 40px;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 100vw;
   z-index: 99999;
-  font-family: "Open Sans Condensed", sans-serif;
-  text-transform: uppercase;
-  font-size: 1.5rem;
-  line-height: 130%;
-  font-weight: bold; }
+  background: var(--color-background);
+  border-radius: 0;
+  text-align: center;
+  padding: 4px;
+  display: flex;
+  align-content: center; }
 
 a.fn-item {
-  display: block;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
   cursor: pointer;
   opacity: 0.7;
   text-decoration: none; }
@@ -198,6 +203,8 @@ a.fn-item {
       left: unset;
       right: 6%;
       border-top-color: var(--section-dark-bg-color); }
+    .post-holder.dark h3 {
+      --color-text: var(--section-dark-text-color); }
   .post-holder .post-after {
     position: absolute;
     bottom: -40px;
@@ -216,7 +223,7 @@ a.fn-item {
 .post {
   position: relative;
   width: 80%;
-  max-width: 700px;
+  max-width: 1000px;
   margin: 0rem auto;
   padding-bottom: 4rem;
   padding-top: 4rem;
@@ -280,6 +287,15 @@ a.fn-item {
   .site-footer .links li {
     margin-left: unset; }
 
+/** ==========  Columns ============ */
+.gdoc-columns {
+  display: flex;
+  gap: 16px; }
+
+.gdoc-columns__content {
+  flex: 0.9;
+  justify-content: space-between; }
+
 html {
   height: 100%;
   max-height: 100%;
@@ -333,7 +349,8 @@ h2 {
   text-indent: -2px; }
 
 h3 {
-  font-size: 3.5rem; }
+  font-size: 3.5rem;
+  color: var(--section-light-text-color-2); }
 
 h4 {
   font-size: 3rem; }
@@ -511,23 +528,6 @@ table {
    8. Media Queries - Smaller than 1130px
    ========================================================================== */
 @media only screen and (max-width: 1130px) {
-  /* makes it a top sticky menu */
-  .fixed-nav {
-    opacity: 1;
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    flex-wrap: wrap;
-    flex-direction: row;
-    width: 100vw;
-    z-index: 99999;
-    background: var(--color-background);
-    border-radius: 0;
-    text-align: center;
-    padding: 4px; }
-  a.fn-item {
-    display: inline;
-    margin-left: 10px; }
   blockquote {
     margin-left: 0; }
   .post-holder {

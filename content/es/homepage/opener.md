@@ -1,14 +1,18 @@
 ---
-title: "Welcome"
+title: "Nuestra historia"
 weight: 1
 ---
 
-`Hugo-Scroll` theme alternates colors of sections that are placed on single page.
-The landing screen is meant to be visually striking.
+### Más de 25 años de inovación en prótesis dentales.
 
-Single-page approach is oriented towards small to medium content length, that won't overwhelm the user.
-You can also delegate lengthier, less important or more sizeable content to [dedicated pages](services).
+{{< columns >}} <!-- begin columns block -->
 
-> The belly rules the mind. --- spanish proverb
+**En 1996**, un grupo de expertos en prótesis dentales, con amplia trayectoria en el sector, decidió unir su experiencia para fundar Odontolan. Desde nuestros inicios, nuestro objetivo ha sido ofrecer soluciones de alta calidad a clínicas y odontólogos, combinando artesanía y tecnología para crear prótesis dentales precisas y duraderas.
 
-By the way this welcome section won't show in the cover menu.
+Hoy, **más de 25 años después**, seguimos siendo un laboratorio dental de referencia en Gipuzkoa, brindando servicio a profesionales de todo el País Vasco, Navarra, La Rioja y comunidades cercanas. Nuestro compromiso con la innovación y la excelencia nos ha permitido crecer y seguir ofreciendo prótesis adaptadas a las necesidades de cada paciente.
+
+<--->
+
+texto de prueba.
+
+{{< /columns >}}
