@@ -115,3 +115,9 @@ enableEmoji = true
     weight = 20
     contentDir = "content/eu"
     languageName = "Euskera"
+
+
+    [markup.goldmark.renderer]
+      hardWraps = false
+      unsafe = true
+      xhtml = false
