@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
   /* === Cover / Landing area === */
   --cover-text-color: #37501a;
@@ -21,7 +22,7 @@
   /* Dark section - text color */
   --section-dark-text-color: var(--section-light-bg-color);
   /* Dark section - background color */
-  --section-dark-bg-color: #b80135;
+  --section-dark-bg-color: #cce0b7;
   /* Light&Dark section >quote. Suppressive color, compared to 'Light section - text color'*/
   --section-uni-quote: grey;
   /* Light&Dark section `code` a bit darker than 'Light section - background color' */
@@ -193,18 +194,21 @@ a.fn-item {
   position: relative;
   /* The triangular parts between posts */ }
   .post-holder.dark {
-    --color-text: var(--section-dark-text-color);
     --color-background: var(--section-dark-bg-color);
     background-color: var(--section-dark-bg-color);
-    color: var(--section-dark-text-color); }
-    .post-holder.dark hr {
-      border-color: var(--section-dark-text-color); }
+    /* Fix <hr> color
+    hr {
+     border-color: var(--section-dark-text-color);
+    }*/
+    /* h3
+    {
+          --color-text: var(--section-dark-text-color);
+    }
+          */ }
     .post-holder.dark .post-after {
       left: unset;
       right: 6%;
       border-top-color: var(--section-dark-bg-color); }
-    .post-holder.dark h3 {
-      --color-text: var(--section-dark-text-color); }
   .post-holder .post-after {
     position: absolute;
     bottom: -40px;
@@ -418,12 +422,22 @@ a.fn-item {
 /* == Divs de columnas == */
 .columns_outer {
   display: flex;
-  background-color: lightgray; }
+  gap: 16px; }
 
 .columns_inner {
   display: flex;
-  flex-direction: column;
-  gap: 16px; }
+  flex-direction: column; }
+
+/* == Divs botón == */
+.div_button {
+  align-self: top;
+  width: 150%;
+  height: 30vh;
+  background-color: #bde4bc;
+  color: #008455;
+  margin: 1em;
+  border-radius: 5%;
+  padding: 1em; }
 
 html {
   height: 100%;

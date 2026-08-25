@@ -1,12 +1,11 @@
 ---
 title: "Nuestra historia"
+navigation_menu_title: "Historia"
 weight: 1
 ---
 
 ### Más de 25 años de inovación en prótesis dentales.
 
-
-hola
 
 {{< div "columns_outer" >}} 
 
@@ -16,8 +15,14 @@ hola
 Hoy, **más de 25 años después**, seguimos siendo un laboratorio dental de referencia en Gipuzkoa, brindando servicio a profesionales de todo el País Vasco, Navarra, La Rioja y comunidades cercanas. Nuestro compromiso con la innovación y la excelencia nos ha permitido crecer y seguir ofreciendo prótesis adaptadas a las necesidades de cada paciente.
 {{< / div >}}
 
-{{< div "columns_inner" >}}
-Esto es el segundo texto de ejemplo que sirve para ver si puedo poner dos columnas con div de esta forma. :o **Negrita por si acaso**.
+{{< div "columns_inner, div_button" >}}
+**¿Eres un profesional del sector de la odontología?**
+Contáctanos:
+{{< div "" >}}
+laboratorio@odontolan.com
+{{< / div >}}
+
+
 {{< / div >}}
 
 {{< / div >}}
