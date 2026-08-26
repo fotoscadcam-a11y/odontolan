@@ -437,7 +437,8 @@ a.fn-item {
   color: #008455;
   margin: 1em;
   border-radius: 5%;
-  padding: 1em; }
+  padding: 1em;
+  margin-top: 10%; }
 
 html {
   height: 100%;
