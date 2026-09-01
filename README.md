@@ -13,3 +13,8 @@ Dentro de content están los contenidos generales de la web, es decir, lo que se
 Assets almacena el contenido que no sea texto, por una parte guardando las imagenes y el resto de multimedia que se utilice, y por otra las modificaciones en cuanto el aspecto de la web que aporte cambios por encima del que viene por defecto del tema. 
 
 Layouts son contenidos que añaden modificaciones y funcionalidades a la web. En un principio no hace falta modificar nada dentro de ahí ya que son aspectos más técnicos de la web.
+
+## Formulario
+
+El formulario está hecho a través de Web3Forms, que es un servicio externo que hace de intermediario para mandar lo que se rellene en el formulario directamente al email enlazado.
+En este momento está conectado al correo [fotoscadcam@gmail.com] en caso de que se quiera conectar a otro correo hay que crear una cuenta en su web https://web3forms.com/ e introducir la llave que se proporcione en [hugo.toml] en el parámetro [web3forms_key].
