@@ -1,9 +1,10 @@
 ---
-title: "Contact"
-weight: 4
+title: "Contacto"
+weight: 5
 header_menu: true
 ---
 
-{{<contact_list>}}
+{{<form label_name="Nombre" label_message="Mensaje" label_button="Enviar">}}
 
-Let us get in touch!
+
+Contáctanos!

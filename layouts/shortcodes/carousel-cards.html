@@ -1,0 +1,91 @@
+{{ $id := .Get "id" }}
+
+<div class="card-carousel-container" id="container-{{ $id }}">
+  <!-- Botones de Navegación -->
+  <button class="carousel-btn btn-left" onclick="scrollCarousel('{{ $id }}', -1)" aria-label="Anterior">❮</button>
+  
+  <div class="card-carousel" id="{{ $id }}">
+    {{ $data := .Inner | chomp | transform.Unmarshal }}
+    
+    {{/* Renderizamos los elementos originales */}}
+    {{ range $data }}
+    <div class="carousel-card">
+      {{ if .image }}
+        <div class="card-image">
+          <img src="{{ .image | relURL }}" alt="{{ .title | default "Característica" }}">
+        </div>
+      {{ end }}
+      <div class="card-content">
+        {{ if .title }}<h3>{{ .title }}</h3>{{ end }}
+        {{ if .description }}<p>{{ .description }}</p>{{ end }}
+      </div>
+    </div>
+    {{ end }}
+  </div>
+
+  <button class="carousel-btn btn-right" onclick="scrollCarousel('{{ $id }}', 1)" aria-label="Siguiente">❯</button>
+</div>
+
+<style>
+  
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const carousel = document.getElementById('{{ $id }}');
+  const cards = Array.from(carousel.children);
+  if (cards.length === 0) return;
+
+  // 1. Cloramos los elementos al inicio y al final para crear la ilusión de bucle infinito
+  cards.forEach(card => {
+    const cloneBefore = card.cloneNode(true);
+    const cloneAfter = card.cloneNode(true);
+    carousel.appendChild(cloneAfter);
+    carousel.insertBefore(cloneBefore, carousel.firstChild);
+  });
+
+  // Calcular las dimensiones reales
+  const cardWidth = cards[0].offsetWidth;
+  const gap = parseFloat(window.getComputedStyle(carousel).gap) || 0;
+  const totalItemWidth = cardWidth + gap;
+  const originalCount = cards.length;
+
+  // Posicionar inicialmente el scroll en el bloque de tarjetas originales centrales
+  const initialScroll = totalItemWidth * originalCount;
+  carousel.scrollLeft = initialScroll;
+
+  // 2. Escuchar el evento scroll para teletransportar la vista sin que el usuario lo note
+  carousel.addEventListener('scroll', () => {
+    const currentScroll = carousel.scrollLeft;
+    const maxScroll = carousel.scrollWidth - carousel.clientWidth;
+
+    // Si llega al extremo izquierdo (zona de clones iniciales)
+    if (currentScroll <= totalItemWidth) {
+      carousel.classList.add('no-snap');
+      carousel.scrollLeft = currentScroll + (totalItemWidth * originalCount);
+      // Forzar un reflujo (reflow) para que el navegador aplique el cambio antes de reactivar el snap
+      carousel.offsetHeight; 
+      carousel.classList.remove('no-snap');
+    } 
+    // Si llega al extremo derecho (zona de clones finales)
+    else if (currentScroll >= maxScroll - totalItemWidth) {
+      carousel.classList.add('no-snap');
+      carousel.scrollLeft = currentScroll - (totalItemWidth * originalCount);
+      carousel.offsetHeight;
+      carousel.classList.remove('no-snap');
+    }
+  });
+});
+
+// Función global de navegación para los botones (evita duplicar lógica en el HTML)
+function scrollCarousel(id, direction) {
+  const carousel = document.getElementById(id);
+  const firstCard = carousel.querySelector('.carousel-card');
+  if (!firstCard) return;
+  
+  const gap = parseFloat(window.getComputedStyle(carousel).gap) || 0;
+  const step = firstCard.offsetWidth + gap;
+  
+  carousel.scrollBy({ left: step * direction, behavior: 'smooth' });
+}
+</script>

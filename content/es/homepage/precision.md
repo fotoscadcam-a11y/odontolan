@@ -4,7 +4,7 @@ weight: 2
 header_menu: true
 ---
 
-### para Cada Paciente
+### Para cada paciente
 
 {{< div "columns_outer" >}} 
 

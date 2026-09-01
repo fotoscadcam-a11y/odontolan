@@ -2,6 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/homepage/historia/</loc>
+  </url><url>
+    <loc>http://localhost:1313/homepage/precision/</loc>
+  </url><url>
+    <loc>http://localhost:1313/homepage/innovacion/</loc>
+  </url><url>
+    <loc>http://localhost:1313/homepage/servicios/</loc>
+  </url><url>
+    <loc>http://localhost:1313/homepage/contact/</loc>
+  </url><url>
+    <loc>http://localhost:1313/homepage/license/</loc>
+  </url><url>
     <loc>http://localhost:1313/</loc>
     <xhtml:link
                 rel="alternate"
@@ -15,9 +27,5 @@
                 />
   </url><url>
     <loc>http://localhost:1313/license/</loc>
-  </url><url>
-    <loc>http://localhost:1313/services/</loc>
-  </url><url>
-    <loc>http://localhost:1313/legal/</loc>
   </url>
 </urlset>

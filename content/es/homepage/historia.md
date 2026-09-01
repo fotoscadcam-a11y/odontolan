@@ -2,9 +2,11 @@
 title: "Nuestra historia"
 navigation_menu_title: "Historia"
 weight: 1
+header_menu: true
+header_menu_title: "Historia"
 ---
 
-### Más de 25 años de inovación en prótesis dentales.
+### Más de 25 años de inovación en prótesis dentales
 
 
 {{< div "columns_outer" >}} 

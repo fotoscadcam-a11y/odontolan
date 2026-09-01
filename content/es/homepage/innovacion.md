@@ -4,7 +4,7 @@ weight: 3
 header_menu: true
 ---
 
-### Innovación en Cada Prótesis
+### Innovación en cada prótesis
 
 En Odontolan, el futuro es nuestro presente. Apostamos por las últimas tecnologías y la digitalización para ofrecer un servicio eficiente y de máxima calidad.
 {{< div "columns_outer" >}} 

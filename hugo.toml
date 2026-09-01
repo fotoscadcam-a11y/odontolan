@@ -17,8 +17,15 @@ title = "Odontolan - Tu laboratorio odontologico"
 # enable emoji processing in Markdown (valid only for pure markdown content)
 enableEmoji = true
 
+# ocultar las páginas que sean "draft"
+buildDrafts = false
+
 # Theme-specific variables `.Site.Params.myParamName`
 [params]
+
+    # Codigo API de Web3Forms para el formulario
+    web3forms_key = "38b292a3-797a-4790-a5df-64d1423a25ae"
+
 
     # The path to your "favicon". This should be a square (at least 32px x 32px) png-file.
     favicon = "images/favicon.png"
