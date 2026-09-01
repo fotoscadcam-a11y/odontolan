@@ -1,1 +1,2 @@
-<link rel="stylesheet" href="assets/css/custom.scss" type="text/css">
+{{ $styles := resources.Get "css/custom.scss" | toCSS }}
+<link rel="stylesheet" href="{{ $styles.RelPermalink }}" type="text/css">
