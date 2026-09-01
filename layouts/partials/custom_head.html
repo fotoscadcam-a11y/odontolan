@@ -1,1 +1,2 @@
-<link rel="stylesheet" href="assets/css/custom.scss" type="text/css">
+{{ $styles := resources.Get "css/custom.css" | minify }}
+<link rel="stylesheet" href="{{ $styles.Permalink }}" media="screen">
